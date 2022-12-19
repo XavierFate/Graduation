@@ -33,6 +33,7 @@ public class BallController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        rigidbody.velocity = Vector2.zero;
         isDead = true;
         animator.SetTrigger("Die");
         GameController.instance.BallDied();

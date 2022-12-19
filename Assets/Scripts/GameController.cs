@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public GameObject gameOverText;
     public bool gameOver = false;
+    public float moveSpeed = -1.5f;
 
     private void Awake()
     {
