@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
     public GameObject gameOverText;
+    public TMP_Text scoreText;
     public bool gameOver = false;
     public float moveSpeed = -1.5f;
+
+    private int score = 0;
 
     private void Awake()
     {
@@ -35,6 +40,15 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void BallScored()
+    {
+        if(gameOver)
+        {
+            return;
+        }
+        score++;
+        scoreText.text = "Score: " + score.ToString();
+    }
     public void BallDied()
     {
         gameOverText.SetActive(true);

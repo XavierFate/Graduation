@@ -400,8 +400,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6050201853147124437}
   - component: {fileID: 6050201853147124436}
-  - component: {fileID: 5306713668524430669}
   - component: {fileID: 6804742415996456241}
+  - component: {fileID: 707044196}
+  - component: {fileID: 707044197}
   m_Layer: 0
   m_Name: ObstacleHandler
   m_TagString: Untagged
@@ -452,7 +453,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 5}
   m_EdgeRadius: 0
---- !u!50 &5306713668524430669
+--- !u!114 &6804742415996456241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050201853147124439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7d588f6b0c846498d8e95ae84e3656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &707044196
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -473,7 +486,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6804742415996456241
+--- !u!114 &707044197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -482,6 +495,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6050201853147124439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7d588f6b0c846498d8e95ae84e3656, type: 3}
+  m_Script: {fileID: 11500000, guid: 602e361b417aca046868d97500a0af01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
