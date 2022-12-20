@@ -7,6 +7,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
+
     public static GameController instance;
     public GameObject gameOverText;
     public TMP_Text scoreText;
