@@ -22,15 +22,12 @@ namespace DefaultNamespace
 
         public GameObject startScreen;
         [SerializeField] private GameObject gameScreen;
-        [SerializeField] private GameObject winScreen;
 
         public enum GameState
         {
             None,
             Start,
-            Game,
-            Win,
-            Fail
+            Game
         }
 
         private GameState _state;
@@ -52,9 +49,6 @@ namespace DefaultNamespace
                         break;
                     case GameState.Game:
                         screen = gameScreen;
-                        break;
-                    case GameState.Win:
-                        screen = winScreen;
                         break;
                 }
 
@@ -83,37 +77,21 @@ namespace DefaultNamespace
         {
             TurnOffAllScreens();
             State = GameState.Start;
+            Time.timeScale = 0f;
         }
 
         private void TurnOffAllScreens()
         {
             startScreen.SetActive(false);
             gameScreen.SetActive(false);
-            winScreen.SetActive(false);
         }
 
         public void StartGame()
         {
             State = GameState.Game;
+            Time.timeScale = 1f;
         }
-
-        private void OnDead()
-        {
-            State = GameState.Fail;
-        }
-
-        private void OnWin()
-        {
-            Ad.ShowAd();
-            State = GameState.Win;
-        }
-
         public void RestartGame()
-        {
-            StartGame();
-        }
-
-        public void NextLevel()
         {
             StartGame();
         }

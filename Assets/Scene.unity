@@ -201,6 +201,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &311235899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1646920184270827443, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+  m_PrefabInstance: {fileID: 2305919492446751670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &550568375
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,9 +315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ad: {fileID: 550568383}
-  startScreen: {fileID: 0}
-  gameScreen: {fileID: 0}
-  winScreen: {fileID: 0}
+  startScreen: {fileID: 2099693250}
+  gameScreen: {fileID: 311235899}
 --- !u!4 &670884875
 Transform:
   m_ObjectHideFlags: 0
@@ -383,6 +387,7 @@ MonoBehaviour:
   interstitialAds: {fileID: 550568383}
   gameOverText: {fileID: 1983439956}
   scoreText: {fileID: 1208099462}
+  button: {fileID: 0}
   gameOver: 0
   moveSpeed: -6.5
 --- !u!4 &1131603341
@@ -553,17 +558,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 993d775c29f24c741977088d5e59c0e4, type: 3}
---- !u!114 &1511942818 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
-  m_PrefabInstance: {fileID: 2305919492446751670}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1511942821 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4901096767675573319, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
@@ -721,6 +715,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2099693250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 638615255773945040, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+  m_PrefabInstance: {fileID: 2305919492446751670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2305919492446751670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -728,9 +727,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RestartGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349169269, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -739,22 +766,30 @@ PrefabInstance:
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1511942821}
+      objectReference: {fileID: 1131603340}
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowAd
+      value: RestartGame
       objectReference: {fileID: 0}
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RewardedAdsButton, Assembly-CSharp
+      value: GameController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 638615255773945040, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646920184270827443, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305919492819007354, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_Pivot.x
@@ -844,10 +879,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 4901096767675573319, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
-      propertyPath: _showAdButton
+    - target: {fileID: 2305919493283049442, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925557204101528213, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1511942818}
+      objectReference: {fileID: 670884874}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
 --- !u!1001 &4664581891677555633

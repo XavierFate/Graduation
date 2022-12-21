@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Advertisements;
+using Unity.VisualScripting;
 
 public class GameController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
     public GameObject gameOverText;
     public TMP_Text scoreText;
+    public Button button;
     public bool gameOver = false;
     public float moveSpeed = -1.5f;
 
@@ -37,10 +39,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameOver == true && Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
+            if (gameOver == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(1)))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            }
         }
     }
 

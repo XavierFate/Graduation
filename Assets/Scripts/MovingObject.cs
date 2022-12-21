@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,13 @@ public class MovingObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.velocity = new Vector2(GameController.instance.moveSpeed, 0);
+        if (GameManager.Instance.State != GameManager.GameState.Game)
+        {
+            rigidbody = GetComponent<Rigidbody2D>();
+            rigidbody.velocity = new Vector2(GameController.instance.moveSpeed, 0);
+            return;
+        }
+        
     }
 
     // Update is called once per frame
