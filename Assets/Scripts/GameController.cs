@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Advertisements;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] InterstitialAds interstitialAds;
 
     public static GameController instance;
     public GameObject gameOverText;
@@ -14,7 +16,7 @@ public class GameController : MonoBehaviour
     public bool gameOver = false;
     public float moveSpeed = -1.5f;
 
-    private int score = 0;
+    public static int score = 0;
 
     private void Awake()
     {
@@ -29,7 +31,7 @@ public class GameController : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class GameController : MonoBehaviour
         if(gameOver == true && Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         }
     }
 
@@ -52,6 +55,7 @@ public class GameController : MonoBehaviour
     }
     public void BallDied()
     {
+        interstitialAds.ShowAd();
         gameOverText.SetActive(true);
         gameOver = true;
     }

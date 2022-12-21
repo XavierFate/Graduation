@@ -758,10 +758,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 2c862c8f-cce4-4976-a2c1-8bb7a1b1db3f
+  cloudProjectId: 961f086f-3fd9-4bd7-9821-4e08fcc051a0
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GraduationProject
+  projectName: BallGame
   organizationId: sova-org
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

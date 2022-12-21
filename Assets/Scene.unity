@@ -177,7 +177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 199401182}
   m_Layer: 0
-  m_Name: Scenery
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,7 +199,7 @@ Transform:
   - {fileID: 87468783}
   - {fileID: 901153059}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &550568375
 GameObject:
@@ -210,6 +210,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 550568380}
+  - component: {fileID: 550568381}
+  - component: {fileID: 550568382}
+  - component: {fileID: 550568383}
   m_Layer: 0
   m_Name: ADManager
   m_TagString: Untagged
@@ -230,7 +233,100 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &550568381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550568375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff63de104d920c74e9222519191b3ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5085389
+  _iOSGameId: 5085388
+  _testMode: 1
+  rewardedAdsButton: {fileID: 1511942821}
+--- !u!114 &550568382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550568375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d462d537f2d96124db65d371814b531d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bannerPosition: 4
+  androidAdId: Banner_Android
+  iOSAdId: Banner_iOS
+--- !u!114 &550568383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550568375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda1b8d654c891049b7058cbc639121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
+--- !u!1 &670884873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670884875}
+  - component: {fileID: 670884874}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &670884874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670884873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72834b02b51be5f478d9e5de43407040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ad: {fileID: 550568383}
+  startScreen: {fileID: 0}
+  gameScreen: {fileID: 0}
+  winScreen: {fileID: 0}
+--- !u!4 &670884875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670884873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &901153058 stripped
 GameObject:
@@ -284,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0370e5768afc7bb45823a1477224a3e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interstitialAds: {fileID: 550568383}
   gameOverText: {fileID: 1983439956}
   scoreText: {fileID: 1208099462}
   gameOver: 0
@@ -301,7 +398,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1131603342
 MonoBehaviour:
@@ -386,7 +483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1208099462 stripped
 MonoBehaviour:
@@ -456,6 +553,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 993d775c29f24c741977088d5e59c0e4, type: 3}
+--- !u!114 &1511942818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+  m_PrefabInstance: {fileID: 2305919492446751670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1511942821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4901096767675573319, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+  m_PrefabInstance: {fileID: 2305919492446751670}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2616f7b5ee5e7647ad4f27933021b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1875378868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -600,7 +719,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2305919492446751670
 PrefabInstance:
@@ -609,6 +728,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1511942821}
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowAd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RewardedAdsButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511942818, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2305919492819007354, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -695,8 +842,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305919492819007358, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4901096767675573319, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
+      propertyPath: _showAdButton
+      value: 
+      objectReference: {fileID: 1511942818}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fef03a0005161824eb1e2a1c8881e430, type: 3}
 --- !u!1001 &4664581891677555633
@@ -769,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831595429737220911, guid: 5e38e2152b5faf44c8a3b99c42fd2cee, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5831595429737220911, guid: 5e38e2152b5faf44c8a3b99c42fd2cee, type: 3}
       propertyPath: m_LocalPosition.x
