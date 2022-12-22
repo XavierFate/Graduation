@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
             return;
         }
         score++;
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString();
     }
     public void BallDied()
     {

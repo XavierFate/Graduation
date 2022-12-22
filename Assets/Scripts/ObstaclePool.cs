@@ -1,9 +1,12 @@
+using DefaultNamespace;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObstaclePool : MonoBehaviour
 {
+    [SerializeField] private ObstacleConfig obstacleConfig;
     public int obstaclePoolSize = 5;
     public GameObject obstaclePrefab;
     public float spawnRate = 4f;
@@ -15,13 +18,14 @@ public class ObstaclePool : MonoBehaviour
     private float timeSinceLastSpawned;
     private float spawnXPosition = 10f;
     private int currentObstacle = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         obstacles = new GameObject[obstaclePoolSize];
         for (int i = 0; i < obstaclePoolSize; i++)
         {
-            obstacles[i] = (GameObject)Instantiate(obstaclePrefab, objectPoolPosition, Quaternion.identity); 
+            obstacles[i] = (GameObject)Instantiate(obstaclePrefab, objectPoolPosition, Quaternion.identity);
         }
     }
 
